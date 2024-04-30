@@ -154,7 +154,7 @@ class _bottonpageState extends State<bottonpage> {
                 ),
               ),
               Text('Flotingactongbotton',style: TextStyle(
-                fontWeight: FontWeight.bold,fontSize: 25
+                  fontWeight: FontWeight.bold,fontSize: 25
               ),),
               Container(
                 margin: EdgeInsets.all(10),
@@ -180,14 +180,14 @@ class _bottonpageState extends State<bottonpage> {
 
                     ),
                     SizedBox(
-                      height: 50,
-                      width: 100,
+                        height: 50,
+                        width: 100,
 
-                      child: FloatingActionButton(onPressed:() {
+                        child: FloatingActionButton(onPressed:() {
 
-                      },child: Text('+ create ',style: TextStyle(fontSize: 20),)
+                        },child: Text('+ create ',style: TextStyle(fontSize: 20),)
 
-                    )
+                        )
                     ),
                     SizedBox(
                       height: 90,
@@ -222,7 +222,7 @@ class _bottonpageState extends State<bottonpage> {
                     IconButton.outlined(
                       onPressed: () {},
                       icon: const Icon(Icons.shopping_cart,
-                          color: Colors.black87,size: 30,),
+                        color: Colors.black87,size: 30,),
                     ),
                     IconButton.filledTonal(onPressed: () {
 
@@ -230,7 +230,7 @@ class _bottonpageState extends State<bottonpage> {
                     IconButton.filled(onPressed: () {
 
                     }, icon: Icon(CupertinoIcons.home,size: 30,)),
-                    
+
                   ],
                 ),
               )
