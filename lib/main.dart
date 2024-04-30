@@ -107,7 +107,7 @@ class _bottonpageState extends State<bottonpage> {
                                 backgroundColor: Colors.grey),
                             onPressed: () {},
                             child: const Text(
-                              'Filled tonal',
+                              'tonal',
                               style: TextStyle(color: Colors.black45),
                             ),
                           ),
@@ -230,7 +230,7 @@ class _bottonpageState extends State<bottonpage> {
                     IconButton.filled(onPressed: () {
 
                     }, icon: Icon(CupertinoIcons.home,size: 30,)),
-                    
+
                   ],
                 ),
               )
