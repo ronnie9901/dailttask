@@ -57,6 +57,7 @@ Example
   print("Hello world");
 
   Future.delayed(Duration(seconds: 3), () {
+  
     print("Hello Dart!"); // this line will execute after the duration completes
   },);
 
@@ -86,16 +87,25 @@ import 'dart:async';
 
 void main(){
 
- print("Hello rohan!");
-
- Timer(Duration(seconds: 3), () { 
-   print("Hello dart");
- });
-
- print("Hello Flutter!");
+    print("Hello world !");
+    Timer(Duration(seconds: 1), () {
+      print('Jay Shree Ram');
+    });
+    
 }
 
 
  <h2>7. What is Timer.periodic and use with Example?</h2>
-About
+About: " Time periodic" refers to something that occurs or repeats at regular intervals of time. In various fields like physics, mathematics, and engineering, time periodicity is often a fundamental concept. 
+
+examle :
+
+void main(){
+
+    import 'dart:async';
+    Timer.periodic(Duration(seconds: 1), (timer) 
+    {
+      print('hello rohan');
+    });
+}
 
