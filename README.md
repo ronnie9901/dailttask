@@ -23,8 +23,79 @@ samples, guidance on mobile development, and a full API reference.
 
 <h1 align="left"></h1>
 
+
 ###
 
 <div align="center">
   <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/610569ea-8afa-4874-8ec2-8cfb001bb4d1"  />
+
 </div>
+
+
+
+
+
+
+  <h1>  Asyncronous Programming </h1>
+  
+ <h2> 1. What is Asynchronous programming?</h2>
+ defination :  Asynchronous programming is a programming paradigm that allows tasks or operations to run independently and concurrently, without waiting for each other to complete before moving on to the next task.
+
+
+ <h2> 2. What is Future Class ?</h2>
+  defination : Future represents a value that may not be available yet. It encapsulates an asynchronous operation and provides a way to handle the result or error when it becomes available.
+
+
+ <h2> 3. What is Duration class & Future.delayed() constructor with Example ?</h2>
+Duration : A span of time, such as 27 days, 4 hours, 12 minutes, and 3 seconds. A Duration represents a difference from one point in time to another.
+
+Future.delayed() : Delay function creates a future that runs its computation after a delay.
+
+Example
+  void main(){
+
+  print("Hello world");
+
+  Future.delayed(Duration(seconds: 3), () {
+    print("Hello Dart!"); // this line will execute after the duration completes
+  },);
+
+  print("Hello Flutter!");
+}
+
+ <h2> 4. What is the Use of the async & await keyword?</h2>
+async : The async keyword is used to mark a function as asynchronous.
+
+await : The await keyword is used to pause the execution of an asynchronous function until a particular asynchronous operation is completed.
+
+
+
+ <h2> 5. What is Recursion ? With Example.</h2>
+The function calls itself repeatedly until a base condition is reached.
+
+
+
+
+ <h2>  6. What is Timer class with example? </h2>
+A countdown timer that can be configured to fire once or repeatedly.
+
+
+
+Example
+import 'dart:async';
+
+void main(){
+
+ print("Hello rohan!");
+
+ Timer(Duration(seconds: 3), () { 
+   print("Hello dart");
+ });
+
+ print("Hello Flutter!");
+}
+
+
+ <h2>7. What is Timer.periodic and use with Example?</h2>
+About
+
