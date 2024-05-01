@@ -17,6 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
+
 <h3 align="center">1. Icon button Task</h3>
 
 ###
@@ -28,6 +29,20 @@ samples, guidance on mobile development, and a full API reference.
 
 <div align="center">
   <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/610569ea-8afa-4874-8ec2-8cfb001bb4d1"  />
+
+</div>
+
+<h3 align="center">1. clock Task</h3>
+
+###
+
+<h1 align="left"></h1>
+
+
+###
+
+<div align="center">
+  <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/9440f66f-4730-4dce-9469-6fddbee33252"  />
 
 </div>
 
