@@ -1,5 +1,9 @@
+import 'dart:async';
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
@@ -28,218 +32,101 @@ class bottonpage extends StatefulWidget {
 class _bottonpageState extends State<bottonpage> {
   @override
   Widget build(BuildContext context) {
+
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        dateTime  =DateTime.now();
+        if(dateTime.hour>11)
+        {
+          check='am';
+        }
+        else
+        {
+          check= 'pm';
+        }
+
+       switch (dateTime.weekday)
+       {
+         case 1: day = 'monday';
+         break;
+         case 2: day = 'Tuesaday';
+         break;
+         case 3: day = 'wednesday';
+         break;
+         case 4: day = 'thursday';
+         break;
+         case 5: day = 'friday';
+         break;
+         case 6: day = 'saturday';
+         break;
+         case 6: day = 'sunday';
+         break;
+
+       }
+
+      });
+
+
+    });
+
+
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'bottons icons',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Text('Common Buttons',style: TextStyle(
-                  fontWeight: FontWeight.bold,fontSize: 25
-              ),),
-              Container(
-                margin: EdgeInsets.all(10),
-                height: 350,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.black87),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          ElevatedButton(
-                              onPressed: () {}, child: Text('evavated')),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('+ icon'),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.grey),
-                            onPressed: () {},
-                            child: const Text(
-                              'Elevate',
-                              style: TextStyle(color: Colors.black45),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FilledButton(onPressed: () {}, child: Text(' Filled ')),
-                          FilledButton(onPressed: () {}, child: Text(' + icons')),
-                          FilledButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.grey),
-                            onPressed: () {},
-                            child: const Text(
-                              'Filled',
-                              style: TextStyle(color: Colors.black45),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          FilledButton.tonal(
-                              onPressed: () {}, child: Text(' Filled ')),
-                          FilledButton(onPressed: () {}, child: Text(' + icons')),
-                          FilledButton.tonal(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.grey),
-                            onPressed: () {},
-                            child: const Text(
-                              'tonal',
-                              style: TextStyle(color: Colors.black45),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          OutlinedButton(
-                              onPressed: () {}, child: Text(' Outline ')),
-                          OutlinedButton(onPressed: () {}, child: Text(' + icons')),
-                          OutlinedButton(
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.grey),
-                            onPressed: () {},
-                            child: const Text(
-                              'Outline',
-                              style: TextStyle(color: Colors.black45),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          TextButton(
-                              onPressed: () {}, child: Text(' Text ')),
-                          TextButton(onPressed: () {}, child: Text(' + icons')),
-                          TextButton(
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            height: 714,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              boxShadow: const [
+                BoxShadow(
 
-                            onPressed: () {},
-                            child: const Text(
-                              ' Text',
-                              style: TextStyle(color: Colors.black45),
-                            ),
-                          ),
-                        ],
-                      ),
-
-                    ],
-                  ),
+                    spreadRadius: 10,
+                    blurRadius: 20,
+                    blurStyle: BlurStyle.inner
                 ),
+              ],
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                  'https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_640.jpg'
+                )
               ),
-              Text('Flotingactongbotton',style: TextStyle(
-                fontWeight: FontWeight.bold,fontSize: 25
-              ),),
-              Container(
-                margin: EdgeInsets.all(10),
-                height: 200,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.black87),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    FloatingActionButton(onPressed:() {
 
-                    },child: Icon(Icons.add),),
-                    SizedBox(
-                      height: 70,
-                      width: 70,
-                      child: FloatingActionButton(onPressed:() {
 
-                      },child: Icon(Icons.add,size: 40,),),
+            ),
+            child: Column(
 
-                    ),
-                    SizedBox(
-                      height: 50,
-                      width: 100,
+              children: [
+                SizedBox(height: 90,),
+                Text('Alarm',style: TextStyle(fontSize: 20,color: Colors.white)
+                  ,),
+                SizedBox(height: 190,),
+                  Transform.rotate(angle: pi-10,child: Icon(Icons.notifications_active,size: 50,color: Colors.white,)) ,
+                SizedBox(height: 30,),
 
-                      child: FloatingActionButton(onPressed:() {
+                Text('  ${dateTime.day}  : ${dateTime.month} : ${dateTime.year} ',style: TextStyle(
+                  fontSize: 30,color: Colors.white
+                ),),
+                Text('${dateTime.hour%12} : ${dateTime.minute} : ${dateTime.second} ',style: TextStyle(
+                    fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,
+                ),),
+                Text(day,style: TextStyle(
+                    fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
+                ),),
+              ],
 
-                      },child: Text('+ create ',style: TextStyle(fontSize: 20),)
-
-                    )
-                    ),
-                    SizedBox(
-                      height: 90,
-                      width: 90,
-                      child: FloatingActionButton(onPressed:() {
-
-                      },child: Icon(Icons.add,size: 40,),),
-
-                    ),
-                  ],
-                ),
-              ),
-              Text('Icon botton',style: TextStyle(
-                  fontWeight: FontWeight.bold,fontSize: 25
-              ),),
-              Container(
-                margin: EdgeInsets.all(10),
-                height: 150,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.black87),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-
-                    IconButton(onPressed:() {
-
-                    }, icon: Icon(Icons.settings,size: 30,)),
-                    IconButton.outlined(
-                      onPressed: () {},
-                      icon: const Icon(Icons.shopping_cart,
-                          color: Colors.black87,size: 30,),
-                    ),
-                    IconButton.filledTonal(onPressed: () {
-
-                    }, icon: Icon(CupertinoIcons.search,size: 30,color: Colors.grey,)),
-                    IconButton.filled(onPressed: () {
-
-                    }, icon: Icon(CupertinoIcons.home,size: 30,)),
-
-                  ],
-                ),
-              )
-            ],
+            ),
 
           ),
-        ),
+
+
+        ],
       ),
 
     );
   }
 }
+  DateTime dateTime=DateTime.now();
+  String check= '';
+  String day='';
