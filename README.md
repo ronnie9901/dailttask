@@ -46,6 +46,27 @@ samples, guidance on mobile development, and a full API reference.
 
 </div>
 
+<h3 align="center">1. Analogue clock Task</h3>
+
+###
+
+<h1 align="left"></h1>
+
+
+###
+
+<div align="center">
+  <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/be1c6c34-f1a7-4ccc-b42f-4e39cf019be4"  />
+
+</div>
+
+
+
+
+
+
+
+https://github.com/ronnie9901/dailttask/assets/148763509/0e567651-645e-4bda-8e6e-b39f1f9470d1
 
 
 
