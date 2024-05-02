@@ -92,8 +92,6 @@ class _bottonpageState extends State<bottonpage> {
                       'https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_640.jpg'
                   )
               ),
-
-
             ),
             child: Column(
 
@@ -101,11 +99,11 @@ class _bottonpageState extends State<bottonpage> {
                 SizedBox(height: 90,),
                 Text('Alarm',style: TextStyle(fontSize: 20,color: Colors.white)
                   ,),
-                SizedBox(height: 190,),
+                SizedBox(height: 100,),
                 Transform.rotate(angle: pi-10,child: Icon(Icons.notifications_active,size: 50,color: Colors.white,)) ,
                 SizedBox(height: 30,),
 
-                Text('  ${dateTime.day}  : ${dateTime.month} : ${dateTime.year} ',style: TextStyle(
+                Text(' ${dateTime.day}  : ${dateTime.month} : ${dateTime.year} ',style: TextStyle(
                     fontSize: 30,color: Colors.white
                 ),),
                 Text('${dateTime.hour%12} : ${dateTime.minute} : ${dateTime.second} ',style: TextStyle(
@@ -114,6 +112,14 @@ class _bottonpageState extends State<bottonpage> {
                 Text(day,style: TextStyle(
                   fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
                 ),),
+                Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+
+                  ),
+                )
               ],
 
             ),
