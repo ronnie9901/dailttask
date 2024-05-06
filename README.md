@@ -61,6 +61,21 @@ samples, guidance on mobile development, and a full API reference.
 </div>
 
 
+  <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/d4287ccb-4591-499a-9bed-ca713b1ea27c"  />
+
+
+ <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/09b43b99-1c65-46da-804f-75567703b52c"  />
+
+
+
+  <img height="550" src="https://github.com/ronnie9901/dailttask/assets/148763509/c079e5be-4cdd-49de-b0ac-bdab4b9d5d85"  />
+
+
+
+
+
+
+
 
 
 
