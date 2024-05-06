@@ -8,14 +8,14 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 
-class analogue extends StatefulWidget {
-  const analogue({super.key});
+class second extends StatefulWidget {
+  const second({super.key});
 
   @override
-  State<analogue> createState() => _analogueState();
+  State<second> createState() => _secondState();
 }
 
-class _analogueState extends State<analogue> {
+class _secondState extends State<second> {
   @override
   Widget build(BuildContext context) {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -63,10 +63,19 @@ class _analogueState extends State<analogue> {
             decoration: BoxDecoration(
               boxShadow: const [
                 BoxShadow(
+
                     spreadRadius: 10,
                     blurRadius: 20,
-                    blurStyle: BlurStyle.inner),
+                    blurStyle: BlurStyle.inner
+                ),
               ],
+              gradient: LinearGradient(
+                  begin: AlignmentDirectional.topStart,
+                  colors: [
+                    Colors.black12,
+                    Colors.white24,
+                  ]
+              ),
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
@@ -110,7 +119,7 @@ class _analogueState extends State<analogue> {
                   day,
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.white,
+                    color: Colors.red,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -192,7 +201,9 @@ class _analogueState extends State<analogue> {
                         index++;
                       }
                     },
-                    child: Text('ChangeTheme'),),
+                    child: Text('ChangeTheme',style: TextStyle(
+                      color: Colors.red
+                    ),),),
 
                 ),
                 Container(
@@ -200,11 +211,11 @@ class _analogueState extends State<analogue> {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                      color: Colors.blueGrey,
+                      color: Colors.red,
                       borderRadius: BorderRadius.circular(10)
                   ),
                   child: IconButton(onPressed: () {
-
+                    Navigator.of(context).pushNamed('/strap');
                   }, icon: Icon(CupertinoIcons.arrow_right)),
                 )
 
@@ -226,10 +237,10 @@ int index =0;
 
 List img=[
   {
-    'image': 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg',
+    'image': 'https://i.pinimg.com/564x/08/9e/b3/089eb3d4aa77cc4c0f87701b679feaa5.jpg',
   },
   {
-    'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX9uHFTL38BUOOFalaryFNoCpSxZbpieVVqyUpZDyKiDCdgnAqcpFbZecsYCbyNUZ9i4I&usqp=CAU',
+    'image': 'https://e0.pxfuel.com/wallpapers/904/49/desktop-wallpaper-sasuke-sharingan-red-eye-naruto-shippuden-thumbnail.jpg',
   },
 
 

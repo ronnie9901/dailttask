@@ -8,28 +8,22 @@ import 'package:flutter/widgets.dart';
 
 
 
-class alarm extends StatefulWidget {
-  const alarm({super.key});
+
+class first extends StatefulWidget {
+  const first({super.key});
 
   @override
-  State<alarm> createState() => _alarmState();
+  State<first> createState() => _firstState();
 }
 
-class _alarmState extends State<alarm> {
+class _firstState extends State<first> {
   @override
   Widget build(BuildContext context) {
 
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         dateTime  =DateTime.now();
-        if(dateTime.hour>11)
-        {
-          check='am';
-        }
-        else
-        {
-          check= 'pm';
-        }
+
 
         switch (dateTime.weekday)
         {
@@ -51,6 +45,14 @@ class _alarmState extends State<alarm> {
         }
 
       });
+      if(dateTime.hour<11)
+      {
+        check='AM';
+      }
+      else
+      {
+        check= 'PM';
+      }
 
 
     });
@@ -64,47 +66,52 @@ class _alarmState extends State<alarm> {
             height: 714,
             width: double.infinity,
             decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
 
-                    spreadRadius: 10,
-                    blurRadius: 20,
-                    blurStyle: BlurStyle.inner
-                ),
-              ],
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                      'https://cdn.pixabay.com/photo/2016/11/25/23/15/moon-1859616_640.jpg'
-                  )
+               image: DecorationImage(
+                   fit: BoxFit.cover,
+                   image: NetworkImage(
+                       'https://i.pinimg.com/564x/08/9e/b3/089eb3d4aa77cc4c0f87701b679feaa5.jpg'
+                   )
               ),
             ),
             child: Column(
 
               children: [
                 SizedBox(height: 90,),
-                Text('Alarm',style: TextStyle(fontSize: 20,color: Colors.white)
+                Text('Alarm',style: TextStyle(fontSize: 20,color: Colors.red)
                   ,),
                 SizedBox(height: 100,),
                 Transform.rotate(angle: pi-10,child: Icon(Icons.notifications_active,size: 50,color: Colors.white,)) ,
-                SizedBox(height: 30,),
+                SizedBox(height: 60,),
 
-                Text(' ${dateTime.day}  : ${dateTime.month} : ${dateTime.year} ',style: TextStyle(
-                    fontSize: 30,color: Colors.white
+                Text(' ${dateTime.day}/${dateTime.month}/${dateTime.year} ',style: TextStyle(
+                    fontSize: 25,color: Colors.white
                 ),),
-                Text('${dateTime.hour%12} : ${dateTime.minute} : ${dateTime.second} ',style: TextStyle(
-                  fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,
+                SizedBox(height: 20,),
+                Text('${dateTime.hour%12} : ${dateTime.minute} : ${dateTime.second} $check',style: TextStyle(
+                  fontSize: 25,color: Colors.red,fontWeight: FontWeight.bold,
                 ),),
-                Text(day,style: TextStyle(
-                  fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,
-                ),),
-                Container(
-                  height: 100,
-                  width: 100,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-
+                Text(
+                  day,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
                   ),
+                ),
+
+
+                Container(
+                  margin: EdgeInsets.only(left: 240,top: 200),
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(10)
+                  ),
+                  child: IconButton(onPressed: () {
+                 Navigator.of(context).pushNamed('/analog');
+                  }, icon: Icon(CupertinoIcons.arrow_right)),
                 )
               ],
 
